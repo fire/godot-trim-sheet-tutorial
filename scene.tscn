@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6vfp6pk20buj"]
+
+[ext_resource type="Texture2D" uid="uid://cm8hy0m31si1n" path="res://room_albedo.png" id="1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u66rh"]
+albedo_texture = ExtResource("1")
+
+[sub_resource type="QuadMesh" id="1"]
+
+[node name="Spatial" type="Node3D"]
+
+[node name="cube" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_u66rh")
+mesh = SubResource("1")
+
+[node name="OmniLight" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.775155, 0.353854, 0.646461)
